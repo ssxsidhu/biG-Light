@@ -18,7 +18,7 @@ Run 'chmod +x bigLight.sh' in your terminal to make the script executable
 Run ./bigLight.sh 'text you want to print'
 
 B)
-Download the files bigLight.sh, standard.blt(font file) 
+Download the files bigLight.sh, standard.flf(font file) 
 Put both of them in the same folder 
 Run 'chmod +x bigLight.sh' in your terminal to make the script executable
 Run ./bigLight.sh 'text you want to print'
