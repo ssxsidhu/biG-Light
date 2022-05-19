@@ -9,7 +9,7 @@ help()
    echo "options:"
    echo "-h     Print this Help."
    echo "-f     Font used to print the text , requires an argument"
-   echo "-r     option used to remove space between letters"
+   echo "-s     option used to add space between letters"
    echo "-V     Print software version and exit."
    echo
    echo "Goodbye!"
@@ -162,11 +162,11 @@ rm $1 && cat $1t >> $1 && rm $1t
 
 
 
+my_dir=$(dirname "$(readlink -f "$0")")
+fontFile="$my_dir/standard.flf"
+space='s/ //;'
 
-fontFile="standard.flf"
-space=""
-
-while getopts ":f:hVr" opt ;do
+while getopts ":f:hVs" opt ;do
 case $opt in
 h)
 help
@@ -178,11 +178,11 @@ exit
 ;;
 f)
 modifyFont "$OPTARG" 
-fontFile="$OPTARG"
+fontFile="$my_dir/$OPTARG"
 shift $((OPTIND-=1))
 ;;
-r)
-space='s/ //;'
+s)
+space=''
 shift $((OPTIND-=1))
 ;;
 \?)
