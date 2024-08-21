@@ -2,6 +2,8 @@
 
 This project generates text banners or writes the given input in larger letters made out of ordinary characters. It is similar to 'figlet' as it was the original inspiration.
 
+![usage](./big-light.gif)
+
 ## How to Use
 
 There are two ways to use it:
